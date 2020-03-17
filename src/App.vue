@@ -1,12 +1,19 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
+    <NavBar></NavBar>
+    <router-view class="router-view" />
   </div>
 </template>
+<script>
+/* eslint-disable */
+import NavBar from "./components/NavBar";
+
+export default {
+  components: {
+    NavBar
+  }
+};
+</script>
 
 <style lang="scss">
 #app {
