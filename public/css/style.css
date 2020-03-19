@@ -14,10 +14,18 @@
   background-color: #ff7700!important;
 }
 
+.border-accent{
+  border-color: #ff7700!important;
+}
+
 .bg-gray{
   background-color: #ECF6FA!important;
 }
 
 .text-normal{
   color: #3E484C!important;
+}
+
+a:hover {
+  text-decoration: none;
 }

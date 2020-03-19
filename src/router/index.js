@@ -4,6 +4,11 @@ import Home from "../views/Home.vue";
 import Books from "../views/Books.vue";
 import Tutors from "../views/Tutors.vue";
 import Explore from "../views/Explore.vue";
+import Company from "../views/Company.vue";
+import CompanyHome from "../components/CompanyHome.vue";
+import CompanyPost from "../components/CompanyPost.vue";
+import CompanyFaq from "../components/CompanyFaq.vue";
+import CompanyOther from "../components/CompanyOther.vue";
 
 Vue.use(VueRouter);
 
@@ -36,6 +41,29 @@ const routes = [
     path: "/explore",
     name: "Explore",
     component: Explore
+  },
+  {
+    path: "/explore/:id",
+    name: "Busines",
+    component: Company,
+    children: [
+      {
+        path: "home",
+        component: CompanyHome
+      },
+      {
+        path: "faq",
+        component: CompanyFaq
+      },
+      {
+        path: "posts",
+        component: CompanyPost
+      },
+      {
+        path: "other",
+        component: CompanyOther
+      }
+    ]
   }
 ];
 

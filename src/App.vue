@@ -1,16 +1,19 @@
 <template>
   <div id="app">
     <NavBar></NavBar>
-    <router-view class="router-view" />
+    <router-view :key="$route.path" />
+    <Footer></Footer>
   </div>
 </template>
 <script>
 /* eslint-disable */
 import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
 
 export default {
   components: {
-    NavBar
+    NavBar,
+    Footer
   }
 };
 </script>
